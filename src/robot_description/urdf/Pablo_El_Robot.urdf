@@ -13,12 +13,12 @@
       <mass
         value="2.4215" />
       <inertia
-        ixx="0.038812"
-        ixy="2.4997E-05"
-        ixz="0.00013349"
-        iyy="0.038259"
-        iyz="-1.0929E-18"
-        izz="0.074597" />
+        ixx="0.0001"
+        ixy="0"
+        ixz="0"
+        iyy="0.0003"
+        iyz="0"
+        izz="0.0002" />
     </inertial>
     <visual>
       <origin
@@ -44,6 +44,13 @@
       </geometry>
     </collision>
   </link>
+
+
+  <!-- <gazebo>
+  <mul></mul> -->
+
+  <!-- </gazebo> -->
+
   <link
     name="wheel_left_link">
     <inertial>
@@ -53,12 +60,12 @@
       <mass
         value="0.26047" />
       <inertia
-        ixx="0.00041201"
-        ixy="-9.6755E-12"
-        ixz="-2.527E-12"
-        iyy="0.00041201"
-        iyz="3.1287E-12"
-        izz="0.00076355" />
+        ixx="0.00002"
+        ixy="0"
+        ixz="0"
+        iyy="0.00002"
+        iyz="0"
+        izz="0.0001" />
     </inertial>
     <visual>
       <origin
@@ -112,12 +119,12 @@
       <mass
         value="0.26047" />
       <inertia
-        ixx="0.00041201"
-        ixy="8.7204E-12"
-        ixz="-2.7551E-12"
-        iyy="0.00041201"
-        iyz="-2.9859E-12"
-        izz="0.00076355" />
+        ixx="0.00002"
+        ixy="0"
+        ixz="0"
+        iyy="0.00002"
+        iyz="0"
+        izz="0.0001" />
     </inertial>
     <visual>
       <origin
@@ -171,12 +178,12 @@
       <mass
         value="0.0128281265837759" />
       <inertia
-        ixx="4.35042978378941E-06"
-        ixy="3.92733826540723E-09"
-        ixz="1.43398637306382E-21"
-        iyy="4.22331083836077E-06"
-        iyz="-1.23330561063615E-21"
-        izz="3.9070765868801E-06" />
+        ixx="0.00004"
+        ixy="0"
+        ixz="0"
+        iyy="0.00004"
+        iyz="0"
+        izz="0.00001" />
     </inertial>
     <visual>
       <origin
@@ -230,12 +237,12 @@
       <mass
         value="0.0459793119455567" />
       <inertia
-        ixx="1.36058585628758E-05"
-        ixy="-2.60865520999119E-13"
-        ixz="2.2071502932371E-13"
-        iyy="1.36058594056942E-05"
-        iyz="1.10966438522062E-14"
-        izz="2.31589723867144E-05" />
+        ixx="0.00004"
+        ixy="0"
+        ixz="0"
+        iyy="0.00004"
+        iyz="0"
+        izz="0.0001" />
     </inertial>
     <visual>
       <origin
