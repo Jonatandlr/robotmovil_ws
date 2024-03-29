@@ -3,7 +3,7 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="meshesotravez">
+  name="Pablo">
   <link
     name="base_link">
     <inertial>
@@ -29,7 +29,7 @@
           filename="package://robot_description/meshes/base_link.STL" />
       </geometry>
       <material
-        name="">
+        name="ABS">
         <color
           rgba="0.79216 0.81961 0.93333 1" />
       </material>
@@ -45,11 +45,15 @@
     </collision>
   </link>
 
+<!-- 
+  <gazebo>
+  <mu1>200</mu1>
+  <mu2>200</mu2>
+  <kp>1000000</kp>
+  <kd>1</kd>
+  <material>Gazebo/Yellow</material>  
 
-  <!-- <gazebo>
-  <mul></mul> -->
-
-  <!-- </gazebo> -->
+  </gazebo>-->
 
   <link
     name="wheel_left_link">
@@ -76,7 +80,7 @@
           filename="package://robot_description/meshes/wheel_left_link.STL" />
       </geometry>
       <material
-        name="">
+        name="NEGRIN">
         <color
           rgba="0.90196 0.92157 0.92157 1" />
       </material>
@@ -194,7 +198,7 @@
           filename="package://robot_description/meshes/base_castor_link.STL" />
       </geometry>
       <material
-        name="">
+        name="OTRO">
         <color
           rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
@@ -253,7 +257,7 @@
           filename="package://robot_description/meshes/wheel_castor_link.STL" />
       </geometry>
       <material
-        name="">
+        name="NOSE">
         <color
           rgba="0.901960784313726 0.92156862745098 0.92156862745098 1" />
       </material>
