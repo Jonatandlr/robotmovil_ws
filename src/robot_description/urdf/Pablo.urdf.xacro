@@ -167,7 +167,7 @@
     <mu2>200</mu2>
     <kp>1000000</kp>
     <kd>1</kd>
-    <material>Gazebo/Yellow</material>  
+    <material>Gazebo/Gold</material>  
   </gazebo>
 
   <gazebo reference="wheel_left_link">
@@ -175,14 +175,14 @@
     <mu2>200</mu2>
     <kp>1000000</kp>
     <kd>1</kd>
-    <material>Gazebo/Yellow</material>  
+    <material>Gazebo/Silver</material>  
   </gazebo>
   <gazebo reference="wheel_right_link">
     <mu1>200</mu1>
     <mu2>200</mu2>
     <kp>1000000</kp>
     <kd>1</kd>
-    <material>Gazebo/Yellow</material>  
+    <material>Gazebo/Silver</material>  
   </gazebo>
 
   <gazebo reference="base_castor_link">
@@ -190,7 +190,7 @@
     <mu2>0.1</mu2>
     <kp>1000000</kp>
     <kd>1</kd>
-    <material>Gazebo/Yellow</material>  
+    <material>Gazebo/Black</material>  
   </gazebo>
 
   <gazebo reference="wheel_castor_link">
@@ -198,29 +198,30 @@
     <mu2>1</mu2>
     <kp>1000000</kp>
     <kd>1</kd>
-    <material>Gazebo/Yellow</material>  
+    <material>Gazebo/Red</material>  
   </gazebo>
 
 
   <gazebo>
     <plugin name="two_wheeled_robot_diff_drive" filename="libgazebo_ros_diff_drive.so">
- 
-      <update_rate>100</update_rate>
+
+      <updateRate>100</updateRate>
       
       <!-- wheels -->
-      <left_joint>wheel_left_link</left_joint>
-      <right_joint>wheel_right_link</right_joint>
+      <leftJoint>wheel_left_joint</leftJoint>
+      <rightJoint>wheel_right_joint</rightJoint>
  
       <!-- kinematics -->
-      <wheel_separation>0.294</wheel_separation>
-      <wheel_diameter>0.08</wheel_diameter>
+      <wheelSeparation>0.294</wheelSeparation>
+      <wheelDiameter>0.08</wheelDiameter>
  
       <!-- limits -->
-      <max_wheel_torque>20</max_wheel_torque>
-      <max_wheel_acceleration>20.0</max_wheel_acceleration>
+      <wheelTorque>20</wheelTorque>
+      <maxWheelTorque>20</maxWheelTorque>
+      <wheelAcceleration>20.0</wheelAcceleration>
  
       <!-- Receive velocity commands on this ROS topic -->
-      <command_topic>cmd_vel</command_topic>
+      <commandTopic>cmd_vel</commandTopic>
  
       <!-- output -->
       <!-- When false, publish no wheel odometry data to a ROS topic -->
@@ -228,17 +229,18 @@
  
       <!-- When true, publish coordinate transform from odom to base_footprint -->
       <!-- I usually use the robot_localization package to publish this transform -->  
-      <publish_odom_tf>true</publish_odom_tf>
+      <publishOdomTF>true</publishOdomTF>
      
       <!-- When true, publish coordinate transform from base_link to the wheels -->
       <!-- The robot_state_publisher package is often used to publish this transform -->  
-      <publish_wheel_tf>true</publish_wheel_tf>
+      <publishWheelTF>true</publishWheelTF>
  
-      <odometry_topic>odom</odometry_topic>
-      <odometry_frame>odom_link</odometry_frame>
-      <robot_base_frame>base_link</robot_base_frame>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom_link</odometryFrame>
+      <robotBaseFrame>base_link</robotBaseFrame>
+      <publishWheelJointState>true</publishWheelJointState>
  
-      <odometry_source>1</odometry_source>
+      <odometrySource>1</odometrySource>
       <ros>
         <remapping>odom:=wheel/odometry</remapping>
       </ros>
@@ -248,7 +250,7 @@
   <gazebo>
     <plugin name="gazebo_ros_joint_state_publisher"
         filename="libgazebo_ros_joint_state_publisher.so">
-        <update_rate>100</update_rate>
+        <updateRate>100</updateRate>
         <joint_name>base_castor_joint</joint_name>
         <joint_name>wheel_castor_joint</joint_name>
     </plugin>
